@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Polygon2D" type="Polygon2D" parent="Control"]
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( -1, -2, 117, 191, 240, 121, 177, 49, 52, 33, 129, 113, 68, 86 )
