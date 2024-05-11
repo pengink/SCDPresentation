@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 4
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -984.0
+margin_bottom = -560.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Control"]
+anchor_right = 25.7
+anchor_bottom = 15.075
+
+[node name="Panel" type="Panel" parent="Control/AspectRatioContainer"]
+modulate = Color( 0.415686, 0.415686, 0.415686, 0.537255 )
+material = SubResource( 1 )
+margin_left = 212.5
+margin_right = 815.5
+margin_bottom = 603.0

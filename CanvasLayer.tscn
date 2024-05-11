@@ -6,6 +6,12 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Polygon2D" type="Polygon2D" parent="Control"]
-color = Color( 1, 0, 0, 1 )
-polygon = PoolVector2Array( -1, -2, 117, 191, 240, 121, 177, 49, 52, 33, 129, 113, 68, 86 )
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextEdit" type="TextEdit" parent="Control/AspectRatioContainer"]
+margin_left = 212.0
+margin_right = 812.0
+margin_bottom = 600.0
+text = "hhhhhhhhhhhhhhhhh"
