@@ -1,13 +1,24 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scrollMaster.gd" type="Script" id=1]
 [ext_resource path="res://CanvasLayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://CameraOrgin.gd" type="Script" id=4]
+[ext_resource path="res://BLOOD.obj" type="ArrayMesh" id=5]
 
-[sub_resource type="PlaneMesh" id=6]
+[sub_resource type="ProceduralSky" id=8]
 
-[sub_resource type="SphereMesh" id=7]
+[sub_resource type="Environment" id=9]
+background_mode = 2
+background_sky = SubResource( 8 )
+ambient_light_color = Color( 0.192157, 0.0117647, 0.027451, 1 )
+fog_enabled = true
+fog_color = Color( 0.921569, 0.0313726, 0.156863, 1 )
+fog_depth_begin = 0.0
+fog_depth_end = 40.0
+dof_blur_far_distance = 40.0
+dof_blur_far_transition = 25.0
+dof_blur_far_amount = 0.5
 
 [sub_resource type="ViewportTexture" id=5]
 viewport_path = NodePath("Viewport")
@@ -26,7 +37,98 @@ albedo_texture = SubResource( 5 )
 resource_local_to_scene = true
 material = SubResource( 4 )
 
+[sub_resource type="PlaneMesh" id=6]
+
+[sub_resource type="SphereMesh" id=7]
+
+[sub_resource type="VisualShaderNodeFresnel" id=10]
+output_port_for_preview = 0
+default_input_values = [ 2, false, 3, 5.0 ]
+
+[sub_resource type="OpenSimplexNoise" id=11]
+period = 31.8
+persistence = 0.0
+lacunarity = 0.1
+
+[sub_resource type="NoiseTexture" id=12]
+seamless = true
+bump_strength = 32.0
+noise = SubResource( 11 )
+
+[sub_resource type="VisualShaderNodeTexture" id=13]
+output_port_for_preview = 0
+texture = SubResource( 12 )
+
+[sub_resource type="VisualShaderNodeColorConstant" id=14]
+constant = Color( 0.936157, 0.0294835, 0, 1 )
+
+[sub_resource type="VisualShaderNodeTexture" id=17]
+output_port_for_preview = 0
+texture = SubResource( 12 )
+
+[sub_resource type="VisualShader" id=15]
+code = "shader_type spatial;
+render_mode specular_schlick_ggx, async_visible;
+
+uniform sampler2D tex_frg_3;
+uniform sampler2D tex_frg_5;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Texture:3
+	vec4 tex_frg_3_read = texture(tex_frg_3, UV.xy);
+	vec3 n_out3p0 = tex_frg_3_read.rgb;
+	float n_out3p1 = tex_frg_3_read.a;
+
+// Color:4
+	vec3 n_out4p0 = vec3(0.936157, 0.029483, 0.000000);
+	float n_out4p1 = 1.000000;
+
+// Fresnel:2
+	float n_in2p3 = 5.00000;
+	float n_out2p0 = pow(1.0 - clamp(dot(n_out3p0, n_out4p0), 0.0, 1.0), n_in2p3);
+
+// Texture:5
+	vec4 tex_frg_5_read = texture(tex_frg_5, UV.xy);
+	vec3 n_out5p0 = tex_frg_5_read.rgb;
+	float n_out5p1 = tex_frg_5_read.a;
+
+// Output:0
+	AO = n_out2p0;
+	NORMALMAP = n_out5p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -503.277, 157.154 )
+nodes/fragment/0/position = Vector2( 620, 120 )
+nodes/fragment/2/node = SubResource( 10 )
+nodes/fragment/2/position = Vector2( -60, 200 )
+nodes/fragment/3/node = SubResource( 13 )
+nodes/fragment/3/position = Vector2( -660, 220 )
+nodes/fragment/4/node = SubResource( 14 )
+nodes/fragment/4/position = Vector2( -360, 360 )
+nodes/fragment/5/node = SubResource( 17 )
+nodes/fragment/5/position = Vector2( 180, 400 )
+nodes/fragment/connections = PoolIntArray( 3, 0, 2, 0, 4, 0, 2, 1, 2, 0, 0, 6, 5, 0, 0, 8 )
+
+[sub_resource type="ShaderMaterial" id=16]
+shader = SubResource( 15 )
+
 [node name="Main" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 9 )
 
 [node name="Viewport" type="Viewport" parent="."]
 size = Vector2( 1024, 600 )
@@ -36,27 +138,36 @@ transparent_bg = true
 
 [node name="GUI" parent="." instance=ExtResource( 3 )]
 
+[node name="CameraOrgin" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script = ExtResource( 4 )
+
+[node name="ClippedCamera" type="ClippedCamera" parent="CameraOrgin"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
+current = true
+
+[node name="Scroll" type="Spatial" parent="CameraOrgin/ClippedCamera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, 3 )
+script = ExtResource( 1 )
+
+[node name="Plane" type="MeshInstance" parent="CameraOrgin/ClippedCamera/Scroll"]
+transform = Transform( 1, 7.64274e-15, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 1.14641e-14, -1, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../../../..")
+
 [node name="World" type="Spatial" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="World"]
+visible = false
 mesh = SubResource( 6 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="World"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.2, 0 )
+visible = false
 mesh = SubResource( 7 )
 
-[node name="CameraOrgin" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.746139, 0.665791, 0, -0.665791, 0.746139, 0, 0, 0 )
-script = ExtResource( 4 )
-
-[node name="Camera" type="Camera" parent="CameraOrgin"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
-
-[node name="Scroll" type="Spatial" parent="CameraOrgin/Camera"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
-script = ExtResource( 1 )
-
-[node name="Plane" type="MeshInstance" parent="CameraOrgin/Camera/Scroll"]
-transform = Transform( 1, 7.64274e-15, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 1.14641e-14, -1, -4.37114e-08, 0, 0, 0 )
-mesh = SubResource( 1 )
-skeleton = NodePath("../../../..")
+[node name="BLOOD" type="MeshInstance" parent="World"]
+transform = Transform( -1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 4, -2.7, -6 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 16 )
