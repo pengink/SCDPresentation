@@ -87,7 +87,7 @@ void fragment() {
 	float n_out3p1 = tex_frg_3_read.a;
 
 // Color:4
-	vec3 n_out4p0 = vec3(0.936157, 0.029483, 0.000000);
+	vec3 n_out4p0 = vec3(0.936157, 0.029484, 0.000000);
 	float n_out4p1 = 1.000000;
 
 // Fresnel:2
@@ -139,7 +139,6 @@ transparent_bg = true
 [node name="GUI" parent="." instance=ExtResource( 3 )]
 
 [node name="CameraOrgin" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 4 )
 
 [node name="ClippedCamera" type="ClippedCamera" parent="CameraOrgin"]
