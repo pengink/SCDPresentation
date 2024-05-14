@@ -37,10 +37,6 @@ albedo_texture = SubResource( 5 )
 resource_local_to_scene = true
 material = SubResource( 4 )
 
-[sub_resource type="PlaneMesh" id=6]
-
-[sub_resource type="SphereMesh" id=7]
-
 [sub_resource type="VisualShaderNodeFresnel" id=10]
 output_port_for_preview = 0
 default_input_values = [ 2, false, 3, 5.0 ]
@@ -125,6 +121,15 @@ nodes/fragment/connections = PoolIntArray( 3, 0, 2, 0, 4, 0, 2, 1, 2, 0, 0, 6, 5
 [sub_resource type="ShaderMaterial" id=16]
 shader = SubResource( 15 )
 
+[sub_resource type="SphereMesh" id=18]
+height = 1.0
+
+[sub_resource type="Curve3D" id=19]
+_data = {
+"points": PoolVector3Array(  ),
+"tilts": PoolRealArray(  )
+}
+
 [node name="Main" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -156,17 +161,21 @@ skeleton = NodePath("../../../..")
 
 [node name="World" type="Spatial" parent="."]
 
-[node name="MeshInstance" type="MeshInstance" parent="World"]
-visible = false
-mesh = SubResource( 6 )
-
-[node name="MeshInstance2" type="MeshInstance" parent="World"]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.2, 0 )
-visible = false
-mesh = SubResource( 7 )
-
 [node name="BLOOD" type="MeshInstance" parent="World"]
 transform = Transform( -1.5299e-07, 0, 3.5, 0, 3.5, 0, -3.5, 0, -1.5299e-07, 4, -2.7, -6 )
 mesh = ExtResource( 5 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 16 )
+
+[node name="Spawner" type="Spatial" parent="World"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288763, 0, -25.9893 )
+
+[node name="Cell" type="MeshInstance" parent="World/Spawner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50081, 0, -3.13514 )
+mesh = SubResource( 18 )
+
+[node name="Path" type="Path" parent="World/Spawner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.29946 )
+curve = SubResource( 19 )
+
+[node name="PathFollow" type="PathFollow" parent="World/Spawner/Path"]

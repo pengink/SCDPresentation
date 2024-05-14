@@ -17,7 +17,7 @@ func _process(delta):
 	elif scroll.scrollPos <= 10:
 		#get_node("ClippedCamera").translation.z = -4
 		pass
-	transform.basis = transform.basis.slerp(Basis(toRot), 0.02)
+	transform.basis = transform.basis.slerp(Basis(toRot), delta * 2)
 
 func _input(event):
 	if event is InputEventMouseMotion:

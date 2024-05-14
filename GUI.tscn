@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Cursor.tscn" type="PackedScene" id=1]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 4
@@ -18,3 +20,5 @@ anchor_bottom = 15.075
 [node name="Panel" type="Panel" parent="Control/AspectRatioContainer"]
 modulate = Color( 0.415686, 0.415686, 0.415686, 0.537255 )
 material = SubResource( 1 )
+
+[node name="AnimatedSprite" parent="." instance=ExtResource( 1 )]
