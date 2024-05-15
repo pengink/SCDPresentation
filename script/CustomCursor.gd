@@ -2,7 +2,6 @@ extends CanvasLayer
 
 
 onready var cursor = get_node("Cursor")
-onready var scrollBar = get_node("Control/AspectRatioContainer/VScrollBar")
 var is_scrolling : bool = false
 var screen : Viewport
 var mouse_pos : Vector2
@@ -26,6 +25,7 @@ func _physics_process(delta):
 		
 	mouse_pos = screen.get_mouse_position()
 	cursor.offset = cursor.offset.linear_interpolate(mouse_pos, delta * 10)
+	print(get_node("Control/ScrollContainer").scroll_horizontal)
 
 
 func _on_VScrollBar_scrolling():
