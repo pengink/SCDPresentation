@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://RBC/RBC1.gltf" type="PackedScene" id=1]
+
+[node name="RBC1" instance=ExtResource( 1 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+
+[node name="Object_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/Torus002_0" index="0"]
+transform = Transform( 1, 2.23517e-08, 2.98023e-08, -4.47035e-08, 1, 0, -2.98023e-08, -2.98023e-08, 1, 0, 0, 0 )

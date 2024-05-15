@@ -12,7 +12,11 @@ config_version=4
 
 config/name="Sickle Cell"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://textures/icon.png"
+
+[display]
+
+mouse_cursor/custom_image="res://textures/Transparent.png"
 
 [gui]
 
