@@ -21,8 +21,10 @@ func _ready():
 	Input.mouse_mode = 1
 	screen = get_viewport()
 	cursor.offset = screen.get_mouse_position()
-	scrollBar = scrollCon.get_node("_h_scroll")
 	
+	animPlayer.play("Startup")
+	
+	scrollBar = scrollCon.get_node("_h_scroll")
 	if scrollBar != null:
 		scrollBar.connect("changed", self, "_on_changed")
 		print("connected")
@@ -36,7 +38,6 @@ func _physics_process(delta):
 func on_reload():
 	if Input.is_action_just_pressed("escape"):
 		get_tree().reload_current_scene()
-	
 
 func _on_changed():
 	if can_scroll == true:
@@ -59,6 +60,9 @@ func match_page():
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "Startup":
+		animPlayer.play("ToContinue")
+		
 	if current_page >= 1:
 		can_scroll = true
 		
