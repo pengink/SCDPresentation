@@ -60,12 +60,10 @@ func match_page():
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "Startup":
-		animPlayer.play("ToContinue")
-		
 	if current_page >= 1:
 		can_scroll = true
 		
-func _on_Panel_mouse_entered():
-	pass
-	print("entered")
+func _on_CheckButton_toggled(toggle):
+	get_tree().root.get_node("Main/World/Spawner/Path").emit_signal("IS_SICKLING")
+	
+	

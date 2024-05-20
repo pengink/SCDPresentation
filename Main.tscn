@@ -133,3 +133,4 @@ mesh = SubResource( 20 )
 skeleton = NodePath("../../Path")
 
 [connection signal="timeout" from="World/Spawner/Timer" to="World/Spawner/Path" method="_on_Timer_timeout"]
+[connection signal="IS_SICKLING" from="World/Spawner/Path" to="World/Spawner/Path" method="_on_Path_IS_SICKLING"]

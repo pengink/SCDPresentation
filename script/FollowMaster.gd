@@ -6,6 +6,8 @@ export var cellScene : PackedScene
 export var SPEED : int = 12
 var points : Array
 var placementOffset : float = 2.5
+signal IS_SICKLING
+var sickling : bool = false
 
 
 func _ready():
@@ -36,6 +38,20 @@ func _on_Timer_timeout():
 	var instance = cellScene.instance()
 	instance.set_h_offset(rand_range(-placementOffset, placementOffset))
 	instance.set_v_offset(rand_range(-placementOffset, placementOffset))
+	
+	if sickling == true:
+		instance.get_node("Cell/Sketchfab_model/root/GLTF_SceneRootNode/Torus002_0/Object_4").set("blend_shapes/Key 1", 1)
+	else:
+		instance.get_node("Cell/Sketchfab_model/root/GLTF_SceneRootNode/Torus002_0/Object_4").set("blend_shapes/Key 1", 0)
+		
 	add_child(instance)
-
+	
+		
 	timer.wait_time = randf()/3
+
+
+func _on_Path_IS_SICKLING():
+	if sickling == false:
+		sickling = true
+	else:
+		sickling = false
