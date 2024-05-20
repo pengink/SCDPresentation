@@ -12,11 +12,14 @@ config_version=4
 
 config/name="Sickle Cell"
 run/main_scene="res://Main.tscn"
+boot_splash/image="res://textures/whitescreen.png"
 config/icon="res://textures/icon.png"
 
 [display]
 
 mouse_cursor/custom_image="res://textures/Transparent.png"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [gui]
 

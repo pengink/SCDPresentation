@@ -2,10 +2,18 @@ extends CanvasLayer
 
 
 onready var cursor = get_node("Cursor")
-var is_scrolling : bool = false
+onready var animPlayer = get_node("AnimationPlayer")
+onready var scrollCon = get_node("ScrollContainer")
+onready var timer = get_node("Timer")
+
+export var can_scroll = false
+
+var scrollBar : HScrollBar
 var screen : Viewport
 var mouse_pos : Vector2
-var dt : float
+
+var scroll_value : int = 0
+var current_page : int = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,24 +21,47 @@ func _ready():
 	Input.mouse_mode = 1
 	screen = get_viewport()
 	cursor.offset = screen.get_mouse_position()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-	dt = delta
-	is_scrolling = false
+	scrollBar = scrollCon.get_node("_h_scroll")
 	
-	if Input.is_action_pressed("escape"):
-		print("klik")
-		get_tree().quit()
-		
+	if scrollBar != null:
+		scrollBar.connect("changed", self, "_on_changed")
+		print("connected")
+
+func _physics_process(delta):
 	mouse_pos = screen.get_mouse_position()
 	cursor.offset = cursor.offset.linear_interpolate(mouse_pos, delta * 10)
-	print(get_node("Control/ScrollContainer").scroll_horizontal)
+	
+	on_reload()
+	
+func on_reload():
+	if Input.is_action_just_pressed("escape"):
+		get_tree().reload_current_scene()
+	
+
+func _on_changed():
+	if can_scroll == true:
+		scroll_value += 1
+		timer.start()
+
+func _on_Timer_timeout():
+	if scroll_value >= 10:
+		current_page += 1
+		match_page()
+	scroll_value = 0
+	scrollCon.scroll_vertical = 0
+	
+	
+func match_page():
+	can_scroll = false
+	match current_page:
+		1:
+			animPlayer.play("MainPage")
 
 
-func _on_VScrollBar_scrolling():
-	cursor.hide()
-
-
-func _on_VScrollBar_mouse_exited():
-	cursor.show()
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if current_page >= 1:
+		can_scroll = true
+		
+func _on_Panel_mouse_entered():
+	pass
+	print("entered")
