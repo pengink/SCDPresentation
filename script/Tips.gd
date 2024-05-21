@@ -37,6 +37,8 @@ func Page0_Panel():
 func Page0_Panel2():
 	on_desc = 2
 	$Label/AnimatedSprite.play("donut_chart")
+	$Label/AnimatedSprite.offset = Vector2(600, -600)
+	$Label/AnimatedSprite.scale = Vector2(0.3, 0.3)
 	$AnimationPlayer.play("Popup")
 
 func Page0_Panel3():
@@ -48,3 +50,5 @@ func Page1_Panel1():
 	on_desc = 4
 	$Label/AnimatedSprite.play("sickling")
 	$AnimationPlayer.play("Popup")
+	$Label/AnimatedSprite.offset = Vector2(200, -320)
+	$Label/AnimatedSprite.scale = Vector2(.6, .6)
