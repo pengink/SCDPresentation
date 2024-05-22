@@ -59,6 +59,8 @@ func match_page():
 			animPlayer.play("MainPage")
 		2:
 			animPlayer.play("Page2")
+		3:
+			animPlayer.play("Page3")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

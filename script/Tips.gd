@@ -36,6 +36,14 @@ func _input(event):
 					OS.shell_open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4800688/")
 				10:
 					OS.shell_open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7510211/")
+				11:
+					OS.shell_open("https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease")
+				12:
+					OS.shell_open("https://www.hematology.org/-/media/hematology/files/education/hydroxyurea-booklet.pdf")
+				13:
+					OS.shell_open("https://kidshealth.org/en/teens/l-glutamine.html#:~:text=L%2Dglutamine%20")
+				14:
+					OS.shell_open("https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approved-l-glutamine-powder-treatment-sickle-cell-disease")
 					
 func _on_Panel_mouse_exited():
 	on_desc = 0
@@ -50,9 +58,6 @@ func Page0_Panel():
 
 func Page0_Panel2():
 	on_desc = 2
-	$Label/AnimatedSprite.play("donut_chart")
-	$Label/AnimatedSprite.offset = Vector2(500, -520)
-	$Label/AnimatedSprite.scale = Vector2(0.4, 0.4)
 	$AnimationPlayer.play("Popup")
 
 func Page0_Panel3():
@@ -62,10 +67,7 @@ func Page0_Panel3():
 
 func Page1_Panel1():
 	on_desc = 4
-	$Label/AnimatedSprite.play("sickling")
 	$AnimationPlayer.play("Popup")
-	$Label/AnimatedSprite.offset = Vector2(200, -320)
-	$Label/AnimatedSprite.scale = Vector2(.6, .6)
 
 func Page2_Panel1():
 	on_desc = 5
@@ -89,4 +91,21 @@ func Page2_Panel5():
 	
 func Page2_Panel6():
 	on_desc = 10
+	$AnimationPlayer.play("Popup")
+
+
+func Page3_Panel1():
+	on_desc = 11
+	$AnimationPlayer.play("Popup")
+	
+func Page3_Panel2():
+	on_desc = 12
+	$AnimationPlayer.play("Popup")
+
+func Page3_Panel3():
+	on_desc = 13
+	$AnimationPlayer.play("Popup")
+
+func Page3_Panel4():
+	on_desc = 14
 	$AnimationPlayer.play("Popup")
