@@ -48,27 +48,35 @@ func _input(event):
 				14:
 					OS.shell_open("https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approved-l-glutamine-powder-treatment-sickle-cell-disease")
 				16:
-					OS.shell_open("https://www.in.gov/health/gnbs/files/con_SCD_ASH_Hydroxyurea.pdf")
+					OS.shell_open("https://www.hematology.org/-/media/hematology/files/education/hydroxyurea-booklet.pdf")
 				17:
 					OS.shell_open("https://www.msm.edu/blog/2019/facts-and-factors-sickle-cell-anemia.php")
 				18:
 					OS.shell_open("https://www.cdc.gov/ncbddd/sicklecell/index.html")
 				19:
-					OS.shell_open("https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approved-l-glutamine-powder-treatment-sickle-cell-disease")
+					OS.shell_open("https://doi.org/10.1111/ecoj.12433")
 				20:
-					OS.shell_open("https://www.nhlbi.nih.gov/health/sickle-cell-disease")
+					OS.shell_open("https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approved-l-glutamine-powder-treatment-sickle-cell-disease")
 				21:
-					OS.shell_open("https://medlineplus.gov/genetics/condition/sickle-cell-disease/")
+					OS.shell_open("https://doi.org/10.3390/ijns5020020")
 				22:
-					OS.shell_open("https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease")
+					OS.shell_open("https://www.nhlbi.nih.gov/health/sickle-cell-disease")
 				23:
-					OS.shell_open("https://doi.org/10.3324/haematol.2016.154245")
+					OS.shell_open("https://medlineplus.gov/genetics/condition/sickle-cell-disease/")
 				24:
-					OS.shell_open("https://kidshealth.org/en/teens/l-glutamine.html")
+					OS.shell_open("https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease")
 				25:
-					OS.shell_open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6913482/")
+					OS.shell_open("https://doi.org/10.3324/haematol.2016.154245")
 				26:
+					OS.shell_open("https://kidshealth.org/en/teens/l-glutamine.html")
+				27:
+					OS.shell_open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6913482/")
+				28:
+					OS.shell_open("https://doi.org/10.3324/haematol.2018.211391")
+				29:
 					OS.shell_open("https://health.ucdavis.edu/news/headlines/study-finds-black-women-with-sickle-cell-disease-have-worse-maternal-health-outcomes/2023/06")
+				30:
+					OS.shell_open("https://doi.org/10.1353/hpu.2018.0060")
 					
 func _on_Panel_mouse_exited():
 	on_desc = 0
@@ -185,7 +193,23 @@ func Citations_8():
 func Citations_9():
 	on_desc = 25
 	$AnimationPlayer.play("Popup")
-
+	
 func Citations_10():
 	on_desc = 26
+	$AnimationPlayer.play("Popup")
+
+func Citations_11():
+	on_desc = 27
+	$AnimationPlayer.play("Popup")
+
+func Citations_12():
+	on_desc = 28
+	$AnimationPlayer.play("Popup")
+
+func Citations_13():
+	on_desc = 29
+	$AnimationPlayer.play("Popup")
+
+func Citations_14():
+	on_desc = 30
 	$AnimationPlayer.play("Popup")

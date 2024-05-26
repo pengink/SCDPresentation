@@ -1613,7 +1613,6 @@ tracks/1/keys = {
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 2 )
-can_scroll = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../StartUp")
@@ -1830,10 +1829,6 @@ margin_bottom = 1992.0
 rect_scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 15 )
 
-[node name="CitationsPage" type="Control" parent="."]
-margin_right = 1024.0
-margin_bottom = 580.0
-
 [node name="Continue" type="Label" parent="."]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
@@ -2028,8 +2023,9 @@ margin_bottom = 522.0
 mouse_filter = 1
 
 [node name="Citations" type="Control" parent="Tips"]
+margin_top = -35.0
 margin_right = 40.0
-margin_bottom = 39.9998
+margin_bottom = 4.99982
 
 [node name="Button" type="Button" parent="Tips/Citations"]
 anchor_left = 0.5
@@ -2067,79 +2063,107 @@ texture = ExtResource( 9 )
 [node name="Panel" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 68.0
-margin_top = 61.0
+margin_top = 68.0
 margin_right = 461.0
-margin_bottom = 88.0
+margin_bottom = 95.0
 
 [node name="Panel2" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 69.0
-margin_top = 96.0
+margin_top = 101.0
 margin_right = 439.0
-margin_bottom = 123.0
+margin_bottom = 130.0
 
 [node name="Panel3" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 70.0
-margin_top = 130.0
+margin_top = 137.0
 margin_right = 461.0
-margin_bottom = 157.0
+margin_bottom = 165.0
 
 [node name="Panel4" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 69.0
-margin_top = 164.0
+margin_top = 169.0
 margin_right = 461.0
-margin_bottom = 226.0
+margin_bottom = 199.0
 
 [node name="Panel5" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 69.0
-margin_top = 234.0
+margin_top = 207.0
 margin_right = 461.0
-margin_bottom = 261.0
+margin_bottom = 270.0
 
 [node name="Panel6" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 70.0
-margin_top = 268.0
-margin_right = 427.0
-margin_bottom = 295.0
+margin_top = 275.0
+margin_right = 435.0
+margin_bottom = 320.0
 
 [node name="Panel7" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 71.0
-margin_top = 303.0
+margin_top = 326.0
 margin_right = 454.0
-margin_bottom = 364.0
+margin_bottom = 354.0
 
 [node name="Panel8" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 71.0
-margin_top = 373.0
+margin_top = 364.0
 margin_right = 455.0
-margin_bottom = 433.0
+margin_bottom = 390.0
 
 [node name="Panel9" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 71.0
-margin_top = 440.0
+margin_top = 394.0
 margin_right = 455.0
-margin_bottom = 468.0
+margin_bottom = 459.0
 
 [node name="Panel10" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
-margin_left = 71.0
-margin_top = 475.0
-margin_right = 459.0
-margin_bottom = 502.0
+margin_left = 554.0
+margin_top = 59.0
+margin_right = 939.0
+margin_bottom = 121.0
 
 [node name="Panel11" type="Panel" parent="Tips/Citations/Panel"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 549.0
-margin_top = 54.0
+margin_top = 128.0
 margin_right = 948.0
-margin_bottom = 122.0
+margin_bottom = 154.0
+
+[node name="Panel12" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 549.0
+margin_top = 161.0
+margin_right = 948.0
+margin_bottom = 190.0
+
+[node name="Panel13" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 549.0
+margin_top = 196.0
+margin_right = 948.0
+margin_bottom = 259.0
+
+[node name="Panel14" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 549.0
+margin_top = 264.0
+margin_right = 948.0
+margin_bottom = 327.0
+
+[node name="Panel15" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 549.0
+margin_top = 336.0
+margin_right = 948.0
+margin_bottom = 379.0
 
 [node name="Label" type="Label" parent="Tips"]
 visible = false
@@ -2217,3 +2241,11 @@ anims/Popup = SubResource( 117 )
 [connection signal="mouse_exited" from="Tips/Citations/Panel/Panel10" to="Tips" method="_on_Panel_mouse_exited"]
 [connection signal="mouse_entered" from="Tips/Citations/Panel/Panel11" to="Tips" method="Citations_10"]
 [connection signal="mouse_exited" from="Tips/Citations/Panel/Panel11" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel12" to="Tips" method="Citations_11"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel12" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel13" to="Tips" method="Citations_12"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel13" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel14" to="Tips" method="Citations_13"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel14" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel15" to="Tips" method="Citations_14"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel15" to="Tips" method="_on_Panel_mouse_exited"]
