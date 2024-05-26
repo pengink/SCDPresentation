@@ -4,6 +4,8 @@ onready var cursor = get_parent().get_node("Cursor")
 
 var on_desc : int = 0
 
+export var is_down : bool = false
+
 func _ready():
 	pass # Replace with function body.
 	
@@ -13,6 +15,7 @@ func _physics_process(delta):
 func _input(event):
 	if on_desc >= 1:
 		cursor.play("active")
+		
 		
 	if event is InputEventMouseButton && Input.is_action_just_pressed("click"):
 			match on_desc:
@@ -44,6 +47,28 @@ func _input(event):
 					OS.shell_open("https://kidshealth.org/en/teens/l-glutamine.html#:~:text=L%2Dglutamine%20")
 				14:
 					OS.shell_open("https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approved-l-glutamine-powder-treatment-sickle-cell-disease")
+				16:
+					OS.shell_open("https://www.in.gov/health/gnbs/files/con_SCD_ASH_Hydroxyurea.pdf")
+				17:
+					OS.shell_open("https://www.msm.edu/blog/2019/facts-and-factors-sickle-cell-anemia.php")
+				18:
+					OS.shell_open("https://www.cdc.gov/ncbddd/sicklecell/index.html")
+				19:
+					OS.shell_open("https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approved-l-glutamine-powder-treatment-sickle-cell-disease")
+				20:
+					OS.shell_open("https://www.nhlbi.nih.gov/health/sickle-cell-disease")
+				21:
+					OS.shell_open("https://medlineplus.gov/genetics/condition/sickle-cell-disease/")
+				22:
+					OS.shell_open("https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease")
+				23:
+					OS.shell_open("https://doi.org/10.3324/haematol.2016.154245")
+				24:
+					OS.shell_open("https://kidshealth.org/en/teens/l-glutamine.html")
+				25:
+					OS.shell_open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6913482/")
+				26:
+					OS.shell_open("https://health.ucdavis.edu/news/headlines/study-finds-black-women-with-sickle-cell-disease-have-worse-maternal-health-outcomes/2023/06")
 					
 func _on_Panel_mouse_exited():
 	on_desc = 0
@@ -108,4 +133,59 @@ func Page3_Panel3():
 
 func Page3_Panel4():
 	on_desc = 14
+	$AnimationPlayer.play("Popup")
+
+
+func _on_Button_pressed():
+	if is_down == false:
+		get_parent().get_node("AnimationPlayer").play("SourcesDown")
+	else:
+		get_parent().get_node("AnimationPlayer").play("SourcesUp")
+
+func _on_Button_mouse_entered():
+	on_desc = 15
+
+
+func Citations_0():
+	on_desc = 16
+	$AnimationPlayer.play("Popup")
+	
+func Citations_1():
+	on_desc = 17
+	$AnimationPlayer.play("Popup")
+	
+func Citations_2():
+	on_desc = 18
+	$AnimationPlayer.play("Popup")
+	
+func Citations_3():
+	on_desc = 19
+	$AnimationPlayer.play("Popup")
+	
+func Citations_4():
+	on_desc = 20
+	$AnimationPlayer.play("Popup")
+
+func Citations_5():
+	on_desc = 21
+	$AnimationPlayer.play("Popup")
+
+func Citations_6():
+	on_desc = 22
+	$AnimationPlayer.play("Popup")
+
+func Citations_7():
+	on_desc = 23
+	$AnimationPlayer.play("Popup")
+
+func Citations_8():
+	on_desc = 24
+	$AnimationPlayer.play("Popup")
+
+func Citations_9():
+	on_desc = 25
+	$AnimationPlayer.play("Popup")
+
+func Citations_10():
+	on_desc = 26
 	$AnimationPlayer.play("Popup")

@@ -71,3 +71,4 @@ func _on_CheckButton_toggled(toggle):
 	get_tree().root.get_node("Main/World/Spawner/Path").emit_signal("IS_SICKLING")
 	
 	
+

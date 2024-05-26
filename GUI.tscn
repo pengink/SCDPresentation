@@ -1,20 +1,22 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://textures/mousecursor - Copy.png" type="Texture" id=1]
 [ext_resource path="res://script/CustomCursor.gd" type="Script" id=2]
-[ext_resource path="res://textures/Donut Chart - Presentation.png" type="Texture" id=3]
+[ext_resource path="res://textures/references0.png" type="Texture" id=3]
 [ext_resource path="res://textures/icons8-down-arrow-50.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/static/Lora-Italic.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Fonts/Lora-VariableFont_wght.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://script/Tips.gd" type="Script" id=7]
 [ext_resource path="res://ToContinue.tres" type="Animation" id=8]
-[ext_resource path="res://textures/sickle cell.jpg" type="Texture" id=9]
+[ext_resource path="res://textures/reference1.png" type="Texture" id=9]
 [ext_resource path="res://Fonts/static/Lora-Bold.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://textures/Orange and Brown Heart Bubble Map Chart.png" type="Texture" id=11]
 [ext_resource path="res://textures/environmentalfactors.png" type="Texture" id=12]
 [ext_resource path="res://textures/CRISPR.png" type="Texture" id=13]
 [ext_resource path="res://textures/Hydroxyurea.png" type="Texture" id=14]
 [ext_resource path="res://textures/L-Glutamine.png" type="Texture" id=15]
+[ext_resource path="res://textures/sickle cell.jpg" type="Texture" id=16]
+[ext_resource path="res://textures/scdstamps.jpg" type="Texture" id=17]
 
 [sub_resource type="Animation" id=81]
 resource_name = "MainPage"
@@ -161,7 +163,7 @@ tracks/11/keys = {
 "times": PoolRealArray( 1.5, 2.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0, 653 ]
+"values": [ 0, 696 ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("../Page1:visible")
@@ -271,6 +273,54 @@ tracks/20/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1024, 200 ), Vector2( 1024, 200 ), Vector2( 800, 200 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("../Page1/TextureRect:rect_position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 2.2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 770, 89 ), Vector2( 770, 89 ), Vector2( 730, 89 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("../Page1/TextureRect:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 2.2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("../Tips/Page1:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("TextureRect2:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.338235 ), Color( 1, 1, 1, 0.338235 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=122]
@@ -528,6 +578,30 @@ tracks/20/keys = {
 "update": 0,
 "values": [ Vector2( 145, 560 ) ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("../Page1/TextureRect:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("../Page1/TextureRect:rect_position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 730, 89 ), Vector2( 770, 89 ) ]
+}
 
 [sub_resource type="Animation" id=124]
 resource_name = "Page3"
@@ -545,172 +619,172 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../Continue:visible")
+tracks/1/path = NodePath("Title:text")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Title:text")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ "PART 2: GENETIC AND ENVIRONMENTAL FACTORS", "PART 3: RECOMMENDATIONS" ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("Title:visible_characters")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/path = NodePath("Title:visible_characters")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 36, 6, 21 ]
 }
-tracks/4/type = "value"
-tracks/4/path = NodePath("../Page2:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Page2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
-tracks/5/type = "value"
-tracks/5/path = NodePath("../Page3:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Page3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("../Page3:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Page3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
 "times": PoolRealArray( 1, 1.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/7/type = "value"
-tracks/7/path = NodePath("../Page3/TextureRect:rect_position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Page3/TextureRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
 "times": PoolRealArray( 0, 1, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 68, 72 ), Vector2( 68, 72 ), Vector2( 68, 82 ) ]
 }
-tracks/8/type = "value"
-tracks/8/path = NodePath("../Page3/TextureRect2:rect_position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Page3/TextureRect2:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
 "times": PoolRealArray( 0, 1.2, 1.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 379, 72 ), Vector2( 379, 72 ), Vector2( 379, 82 ) ]
 }
-tracks/9/type = "value"
-tracks/9/path = NodePath("../Page3/TextureRect3:rect_position")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Page3/TextureRect3:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
 "times": PoolRealArray( 0, 1.4, 1.9 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 692, 72 ), Vector2( 692, 72 ), Vector2( 692, 82 ) ]
 }
-tracks/10/type = "value"
-tracks/10/path = NodePath("../Page3/TextureRect:modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Page3/TextureRect:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
 "times": PoolRealArray( 0, 1, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/11/type = "value"
-tracks/11/path = NodePath("../Page3/TextureRect2:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
+tracks/10/type = "value"
+tracks/10/path = NodePath("../Page3/TextureRect2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
 "times": PoolRealArray( 0, 1.2, 1.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/12/type = "value"
-tracks/12/path = NodePath("../Page3/TextureRect3:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
+tracks/11/type = "value"
+tracks/11/path = NodePath("../Page3/TextureRect3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
 "times": PoolRealArray( 0, 1.4, 1.9 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/13/type = "value"
-tracks/13/path = NodePath("../Tips/Page2:visible")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
+tracks/12/type = "value"
+tracks/12/path = NodePath("../Tips/Page2:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath("../Tips/Page3:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 tracks/14/type = "value"
-tracks/14/path = NodePath("../Tips/Page3:visible")
+tracks/14/path = NodePath("../Continue:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 1.9 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=84]
@@ -741,7 +815,106 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=125]
-resource_name = "Sources"
+resource_name = "SourcesDown"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Tips/Citations:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 550 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Tips:is_down")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("..:can_scroll")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Tips/Citations/Button:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "Click to pull down sources", "Click to pull up sources" ]
+}
+
+[sub_resource type="Animation" id=127]
+resource_name = "SourcesUp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Tips/Citations:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 550 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Tips:is_down")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("..:can_scroll")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Tips/Citations/Button:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "Click to pull up sources", "Click to pull down sources" ]
+}
 
 [sub_resource type="Animation" id=75]
 resource_name = "Startup"
@@ -1071,6 +1244,30 @@ tracks/26/keys = {
 "update": 0,
 "values": [ Vector2( -100, 0 ), Vector2( -100, 0 ), Vector2( 5, 0 ) ]
 }
+tracks/27/type = "value"
+tracks/27/path = NodePath("../Tips/Citations:rect_position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0, 2.2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -35 ), Vector2( 0, -35 ), Vector2( 0, 0 ) ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("TextureRect2:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0, 2.2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.45098 ) ]
+}
 
 [sub_resource type="CanvasItemMaterial" id=62]
 
@@ -1369,82 +1566,20 @@ size = 12
 use_filter = true
 font_data = ExtResource( 10 )
 
+[sub_resource type="DynamicFont" id=126]
+font_data = ExtResource( 6 )
+
 [sub_resource type="DynamicFont" id=118]
 size = 12
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 6 )
 
-[sub_resource type="AtlasTexture" id=106]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=107]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1024, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=108]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 2048, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=109]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 3072, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=110]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 4096, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=111]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 5120, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=112]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 6144, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=113]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 7168, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=114]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 8192, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=115]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 9216, 0, 1024, 1024 )
-
-[sub_resource type="AtlasTexture" id=116]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 10240, 0, 1024, 1024 )
-
 [sub_resource type="SpriteFrames" id=105]
 animations = [ {
-"frames": [ SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ) ],
-"loop": false,
-"name": "donut_chart",
-"speed": 15.0
-}, {
 "frames": [  ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "sickling",
 "speed": 5.0
 } ]
 
@@ -1487,7 +1622,8 @@ anims/MainPage = SubResource( 81 )
 anims/Page2 = SubResource( 122 )
 anims/Page3 = SubResource( 124 )
 anims/RESET = SubResource( 84 )
-anims/Sources = SubResource( 125 )
+anims/SourcesDown = SubResource( 125 )
+anims/SourcesUp = SubResource( 127 )
 anims/Startup = SubResource( 75 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -1506,35 +1642,41 @@ playing = true
 mouse_filter = 1
 
 [node name="StartScreen" type="ColorRect" parent="StartUp"]
-modulate = Color( 1, 1, 1, 0.584314 )
 material = SubResource( 73 )
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[node name="Title" type="Label" parent="StartUp"]
-modulate = Color( 0, 0, 0, 1 )
-margin_left = 169.0
+[node name="TextureRect2" type="TextureRect" parent="StartUp"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 230.0
 margin_top = 10.0
-margin_right = 1565.0
-margin_bottom = 179.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_right = 780.0
+margin_bottom = 304.0
+texture = ExtResource( 17 )
+
+[node name="Title" type="Label" parent="StartUp"]
+modulate = Color( 0, 0, 0, 0 )
+margin_top = 110.0
+margin_right = 1024.0
+margin_bottom = 310.0
 custom_fonts/font = SubResource( 88 )
-text = "PART 3: RECOMMENDATIONS"
+text = "SICKLE CELL DISEASE"
 align = 1
 autowrap = true
+percent_visible = 0.0
 
 [node name="Desc" type="Label" parent="StartUp"]
-visible = false
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 105.0
-margin_top = 310.0
+margin_top = 301.088
 margin_right = 929.0
-margin_bottom = 382.0
+margin_bottom = 373.088
 mouse_filter = 1
 custom_fonts/font = SubResource( 89 )
 text = "Sickle cell disease (SCD) affects more than 100,000 people in the United States and 20 million people worldwide. People affected with SCD are mostly of African ancestry or black (National Heart, Lung, and Blood Institute, 2024)."
 align = 1
 autowrap = true
+percent_visible = 0.0
 max_lines_visible = 9
 
 [node name="Desc" type="Label" parent="StartUp/Desc"]
@@ -1546,6 +1688,7 @@ mouse_filter = 1
 custom_fonts/font = SubResource( 89 )
 text = "African-American mothers with SCD experience worse maternal health outcomes compared to other racial groups. In 2015 the maternal death rates for the general American population are 17.2 deaths per 100,000 births, while African-Americans experience the highest rates at 42.8 deaths per 100,000 live births (Smith, 2019)."
 autowrap = true
+percent_visible = 0.0
 max_lines_visible = 9
 
 [node name="Desc" type="Label" parent="StartUp/Desc/Desc"]
@@ -1559,12 +1702,11 @@ text = "Babies of mothers with SCD compared to the mother without SCD are at fiv
 "
 align = 1
 autowrap = true
-percent_visible = 0.993506
+percent_visible = 0.0
 max_lines_visible = 9
 
 [node name="ColorRect" type="ColorRect" parent="StartUp"]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.777778 )
 margin_right = 1024.0
 margin_bottom = 600.0
 
@@ -1578,9 +1720,9 @@ visible = false
 [node name="Desc" type="Label" parent="Page1"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 14.0
-margin_top = 70.0
+margin_top = 130.0
 margin_right = 290.0
-margin_bottom = 503.0
+margin_bottom = 563.0
 custom_constants/line_spacing = -1
 custom_fonts/font = SubResource( 119 )
 text = "      Sickle cell disease (SCD) is the most common inherited blood disorder in the United States. It is identified by the \"sickle\" or crescent shaped red blood cells due to its hemoglobin genes forming as rigid strands in the cell as opposed to the free hemoglobin genes. 
@@ -1589,7 +1731,20 @@ text = "      Sickle cell disease (SCD) is the most common inherited blood disor
 	
       Sickle cells last for 10-20 days compared to the normal red blood cell (90-120 days), however new sickle cells are produced more are commonly burst due to their rigid shape. The overproduction of sickle cells and decrease in normal RBCs results in anemia, where the individual would have less energy (National Heart, Lung, and Blood Institute, 2024)."
 autowrap = true
-percent_visible = 0.0
+percent_visible = 0.997139
+
+[node name="TextureRect" type="TextureRect" parent="Page1"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 770.0
+margin_top = 89.0
+margin_right = 1145.0
+margin_bottom = 689.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 16 )
 
 [node name="Page2" type="Control" parent="."]
 visible = false
@@ -1643,30 +1798,35 @@ align = 1
 autowrap = true
 
 [node name="Page3" type="Control" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Page3"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 68.0
-margin_top = 82.0
+margin_top = 72.0
 margin_right = 1148.0
-margin_bottom = 2002.0
+margin_bottom = 1992.0
 rect_scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 13 )
 
 [node name="TextureRect2" type="TextureRect" parent="Page3"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 379.0
-margin_top = 82.0
+margin_top = 72.0
 margin_right = 1459.0
-margin_bottom = 2002.0
+margin_bottom = 1992.0
 rect_scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 14 )
 
 [node name="TextureRect3" type="TextureRect" parent="Page3"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 692.0
-margin_top = 82.0
+margin_top = 72.0
 margin_right = 1772.0
-margin_bottom = 2002.0
+margin_bottom = 1992.0
 rect_scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 15 )
 
@@ -1674,20 +1834,14 @@ texture = ExtResource( 15 )
 margin_right = 1024.0
 margin_bottom = 580.0
 
-[node name="Panel" type="ColorRect" parent="CitationsPage"]
-margin_top = -580.0
-margin_right = 1013.0
-
 [node name="Continue" type="Label" parent="."]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 145.0
-margin_top = -40.0
-margin_right = 1169.0
-margin_bottom = -18.0
-rect_scale = Vector2( 0.7, 0.7 )
+margin_top = -60.0
+margin_right = 1024.0
+margin_bottom = -38.0
 custom_fonts/font = SubResource( 120 )
 text = "Scroll down to continue"
 align = 1
@@ -1709,8 +1863,8 @@ anims/ToContinue = ExtResource( 8 )
 
 [node name="Title" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 5.0
-margin_right = 155.0
+margin_left = -100.0
+margin_right = 50.0
 margin_bottom = 72.0
 custom_fonts/font = SubResource( 121 )
 text = "SICKLE 
@@ -1720,10 +1874,11 @@ autowrap = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_right = 1025.0
-margin_bottom = 600.0
+margin_bottom = 1200.0
 rect_clip_content = false
 mouse_filter = 1
 scroll_horizontal_enabled = false
+scroll_vertical_enabled = false
 
 [node name="ColorRect" type="ColorRect" parent="ScrollContainer"]
 margin_right = 1013.0
@@ -1743,7 +1898,7 @@ modulate = Color( 1, 1, 1, 0 )
 margin_left = 103.0
 margin_top = 318.0
 margin_right = 927.0
-margin_bottom = 377.0
+margin_bottom = 376.0
 mouse_filter = 2
 
 [node name="Panel2" type="Panel" parent="Tips/Page0"]
@@ -1751,7 +1906,7 @@ modulate = Color( 1, 1, 1, 0 )
 margin_left = 104.0
 margin_top = 391.0
 margin_right = 928.0
-margin_bottom = 445.0
+margin_bottom = 454.0
 mouse_filter = 2
 
 [node name="Panel3" type="Panel" parent="Tips/Page0"]
@@ -1759,17 +1914,16 @@ modulate = Color( 1, 1, 1, 0 )
 margin_left = 104.0
 margin_top = 479.0
 margin_right = 928.0
-margin_bottom = 513.0
+margin_bottom = 523.0
 mouse_filter = 2
 
 [node name="Page1" type="Control" parent="Tips"]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="CheckButton" type="CheckButton" parent="Tips/Page1"]
-margin_left = 1032.0
-margin_right = 1160.0
+margin_left = 1050.0
+margin_right = 1178.0
 margin_bottom = 40.0
 disabled = true
 text = "Sickling"
@@ -1836,6 +1990,7 @@ margin_bottom = 400.0
 mouse_filter = 1
 
 [node name="Page3" type="Control" parent="Tips"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 326, 445 )
@@ -1872,15 +2027,119 @@ margin_right = 951.0
 margin_bottom = 522.0
 mouse_filter = 1
 
-[node name="Button" type="Button" parent="Tips/Page3"]
+[node name="Citations" type="Control" parent="Tips"]
+margin_right = 40.0
+margin_bottom = 39.9998
+
+[node name="Button" type="Button" parent="Tips/Citations"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 492.0
-margin_top = -8.0
-margin_right = 704.0
-margin_bottom = 46.0
+margin_left = 754.0
+margin_top = -20.0
+margin_right = 963.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 126 )
+action_mode = 0
+text = "Click to pull down sources"
+
+[node name="Panel" type="ColorRect" parent="Tips/Citations"]
+margin_top = -550.0
+margin_right = 1024.0
+
+[node name="TextureRect" type="TextureRect" parent="Tips/Citations/Panel"]
+margin_left = 49.0
+margin_top = 33.0
+margin_right = 775.0
+margin_bottom = 826.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+
+[node name="TextureRect2" type="TextureRect" parent="Tips/Citations/Panel"]
+margin_left = 533.0
+margin_top = 33.0
+margin_right = 1261.0
+margin_bottom = 826.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 9 )
+
+[node name="Panel" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 68.0
+margin_top = 61.0
+margin_right = 461.0
+margin_bottom = 88.0
+
+[node name="Panel2" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 69.0
+margin_top = 96.0
+margin_right = 439.0
+margin_bottom = 123.0
+
+[node name="Panel3" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 70.0
+margin_top = 130.0
+margin_right = 461.0
+margin_bottom = 157.0
+
+[node name="Panel4" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 69.0
+margin_top = 164.0
+margin_right = 461.0
+margin_bottom = 226.0
+
+[node name="Panel5" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 69.0
+margin_top = 234.0
+margin_right = 461.0
+margin_bottom = 261.0
+
+[node name="Panel6" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 70.0
+margin_top = 268.0
+margin_right = 427.0
+margin_bottom = 295.0
+
+[node name="Panel7" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 71.0
+margin_top = 303.0
+margin_right = 454.0
+margin_bottom = 364.0
+
+[node name="Panel8" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 71.0
+margin_top = 373.0
+margin_right = 455.0
+margin_bottom = 433.0
+
+[node name="Panel9" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 71.0
+margin_top = 440.0
+margin_right = 455.0
+margin_bottom = 468.0
+
+[node name="Panel10" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 71.0
+margin_top = 475.0
+margin_right = 459.0
+margin_bottom = 502.0
+
+[node name="Panel11" type="Panel" parent="Tips/Citations/Panel"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 549.0
+margin_top = 54.0
+margin_right = 948.0
+margin_bottom = 122.0
 
 [node name="Label" type="Label" parent="Tips"]
 visible = false
@@ -1936,3 +2195,25 @@ anims/Popup = SubResource( 117 )
 [connection signal="mouse_exited" from="Tips/Page3/Panel3" to="Tips" method="_on_Panel_mouse_exited"]
 [connection signal="mouse_entered" from="Tips/Page3/Panel4" to="Tips" method="Page3_Panel4"]
 [connection signal="mouse_exited" from="Tips/Page3/Panel4" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Button" to="Tips" method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Tips/Citations/Button" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="pressed" from="Tips/Citations/Button" to="Tips" method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel" to="Tips" method="Citations_0"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel2" to="Tips" method="Citations_1"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel2" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel3" to="Tips" method="Citations_2"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel4" to="Tips" method="Citations_3"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel4" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel5" to="Tips" method="Citations_4"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel5" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel6" to="Tips" method="Citations_5"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel7" to="Tips" method="Citations_6"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel7" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel8" to="Tips" method="Citations_7"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel9" to="Tips" method="Citations_8"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel9" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel10" to="Tips" method="Citations_9"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel10" to="Tips" method="_on_Panel_mouse_exited"]
+[connection signal="mouse_entered" from="Tips/Citations/Panel/Panel11" to="Tips" method="Citations_10"]
+[connection signal="mouse_exited" from="Tips/Citations/Panel/Panel11" to="Tips" method="_on_Panel_mouse_exited"]
