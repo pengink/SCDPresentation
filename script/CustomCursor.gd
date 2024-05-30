@@ -20,7 +20,7 @@ var current_page : int = 0
 func _ready():
 	Input.mouse_mode = 1
 	screen = get_viewport()
-	cursor.offset = screen.get_mouse_position()
+	cursor.position = screen.get_mouse_position()
 	
 	animPlayer.play("Startup")
 	
@@ -31,7 +31,7 @@ func _ready():
 
 func _physics_process(delta):
 	mouse_pos = screen.get_mouse_position()
-	cursor.offset = cursor.offset.linear_interpolate(mouse_pos, delta * 10)
+	cursor.position = cursor.position.linear_interpolate(mouse_pos, delta * 10)
 	
 	on_reload()
 	

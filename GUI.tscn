@@ -320,7 +320,7 @@ tracks/24/keys = {
 "times": PoolRealArray( 0, 1, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0.338235 ), Color( 1, 1, 1, 0.338235 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=122]
@@ -918,7 +918,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=75]
 resource_name = "Startup"
-length = 5.0
+length = 10.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 2
@@ -926,7 +926,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8, 1.3 ),
+"times": PoolRealArray( 0, 2, 2.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0.777778 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -938,7 +938,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.8, 1.3, 5 ),
+"times": PoolRealArray( 0, 2, 2.6, 10 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 110 ), Vector2( 0, 110 ), Vector2( 0, 110 ), Vector2( 0, 110 ) ]
@@ -950,7 +950,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.8, 1.3, 5 ),
+"times": PoolRealArray( 0, 2, 2.6, 10 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
@@ -962,7 +962,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 4.7 ),
+"times": PoolRealArray( 0, 9.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -974,7 +974,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.8, 1.3 ),
+"times": PoolRealArray( 0, 2, 2.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
@@ -986,7 +986,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 2.9, 3.9 ),
+"times": PoolRealArray( 0, 5.8, 6.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
@@ -998,7 +998,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 2.6, 3.9 ),
+"times": PoolRealArray( 5.5, 6.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 105, 300 ), Vector2( 105, 310 ) ]
@@ -1034,7 +1034,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 5 ),
+"times": PoolRealArray( 0, 10 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -1046,7 +1046,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 4.7, 5 ),
+"times": PoolRealArray( 0, 9.7, 10 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1035, 600 ), Vector2( 1035, 600 ), Vector2( 1013, 600 ) ]
@@ -1070,7 +1070,7 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 2.9, 3.2 ),
+"times": PoolRealArray( 0, 5.8, 6.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0, 0, 193 ]
@@ -1082,7 +1082,7 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.7, 1.3, 5 ),
+"times": PoolRealArray( 0, 1.9, 2.6, 10 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 3, 3, 16, 16 ]
@@ -1094,7 +1094,7 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 3.2, 3.5 ),
+"times": PoolRealArray( 0, 5.8, 6.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0, 0, 275 ]
@@ -1106,7 +1106,7 @@ tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 3.5, 3.9 ),
+"times": PoolRealArray( 0, 5, 5.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0, 0, 153 ]
@@ -1118,7 +1118,7 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 3.9, 4.3 ),
+"times": PoolRealArray( 0, 5.4, 5.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 2, 2, 1 ]
@@ -1130,7 +1130,7 @@ tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0, 3.9, 4.3 ),
+"times": PoolRealArray( 0, 5.4, 5.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 2, 2, 1 ]
@@ -1142,7 +1142,7 @@ tracks/18/loop_wrap = true
 tracks/18/imported = false
 tracks/18/enabled = true
 tracks/18/keys = {
-"times": PoolRealArray( 0, 3.9, 4.3 ),
+"times": PoolRealArray( 0, 5.4, 5.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 2, 2, 1 ]
@@ -1154,7 +1154,7 @@ tracks/19/loop_wrap = true
 tracks/19/imported = false
 tracks/19/enabled = true
 tracks/19/keys = {
-"times": PoolRealArray( 0, 4.7, 5 ),
+"times": PoolRealArray( 0, 6.2, 6.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, true ]
@@ -1202,7 +1202,7 @@ tracks/23/loop_wrap = true
 tracks/23/imported = false
 tracks/23/enabled = true
 tracks/23/keys = {
-"times": PoolRealArray( 0, 2, 2.2 ),
+"times": PoolRealArray( 0, 5.1, 5.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ "SICKLE CELL DISEASE", "SICKLE CELL DISEASE", "PART 1: TARGET AUDIENCE
@@ -1215,7 +1215,7 @@ tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
-"times": PoolRealArray( 0, 0.7, 2, 2.2, 2.6 ),
+"times": PoolRealArray( 0, 1.9, 5.1, 5.3, 5.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0, 17, 17, 0, 25 ]
@@ -1239,7 +1239,7 @@ tracks/26/loop_wrap = true
 tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/keys = {
-"times": PoolRealArray( 0, 2.2, 3 ),
+"times": PoolRealArray( 0, 5.4, 6.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -100, 0 ), Vector2( -100, 0 ), Vector2( 5, 0 ) ]
@@ -1251,7 +1251,7 @@ tracks/27/loop_wrap = true
 tracks/27/imported = false
 tracks/27/enabled = true
 tracks/27/keys = {
-"times": PoolRealArray( 0, 2.2, 3 ),
+"times": PoolRealArray( 0, 7, 7.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, -35 ), Vector2( 0, -35 ), Vector2( 0, 0 ) ]
@@ -1263,10 +1263,10 @@ tracks/28/loop_wrap = true
 tracks/28/imported = false
 tracks/28/enabled = true
 tracks/28/keys = {
-"times": PoolRealArray( 0, 2.2, 3 ),
+"times": PoolRealArray( 0, 5.4, 6.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.45098 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.196078 ) ]
 }
 
 [sub_resource type="CanvasItemMaterial" id=62]
@@ -1667,9 +1667,9 @@ percent_visible = 0.0
 [node name="Desc" type="Label" parent="StartUp"]
 modulate = Color( 0, 0, 0, 0 )
 margin_left = 105.0
-margin_top = 301.088
+margin_top = 300.469
 margin_right = 929.0
-margin_bottom = 373.088
+margin_bottom = 372.469
 mouse_filter = 1
 custom_fonts/font = SubResource( 89 )
 text = "Sickle cell disease (SCD) affects more than 100,000 people in the United States and 20 million people worldwide. People affected with SCD are mostly of African ancestry or black (National Heart, Lung, and Blood Institute, 2024)."
@@ -1730,7 +1730,7 @@ text = "      Sickle cell disease (SCD) is the most common inherited blood disor
 	
       Sickle cells last for 10-20 days compared to the normal red blood cell (90-120 days), however new sickle cells are produced more are commonly burst due to their rigid shape. The overproduction of sickle cells and decrease in normal RBCs results in anemia, where the individual would have less energy (National Heart, Lung, and Blood Institute, 2024)."
 autowrap = true
-percent_visible = 0.997139
+percent_visible = 0.0987124
 
 [node name="TextureRect" type="TextureRect" parent="Page1"]
 modulate = Color( 1, 1, 1, 0 )
