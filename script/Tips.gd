@@ -81,7 +81,6 @@ func _input(event):
 func _on_Panel_mouse_exited():
 	on_desc = 0
 	cursor.play("idle")
-	$Label/AnimatedSprite.play("idle")
 	$AnimationPlayer.stop(0.0)
 	$Label.visible = false
 	

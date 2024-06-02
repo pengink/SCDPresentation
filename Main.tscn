@@ -23,7 +23,7 @@ dof_blur_far_amount = 0.5
 dof_blur_far_quality = 2
 dof_blur_near_distance = 10.0
 dof_blur_near_transition = 9.95
-dof_blur_near_amount = 0.3
+dof_blur_near_amount = 0.06
 dof_blur_near_quality = 2
 
 [sub_resource type="ConcavePolygonShape" id=23]
@@ -57,7 +57,7 @@ current = true
 [node name="Light" type="OmniLight" parent="CameraOrgin"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.97244, 0 )
 light_color = Color( 0.94902, 0.45098, 0.45098, 1 )
-light_energy = 1.4
+light_energy = 3.0
 light_indirect_energy = 0.0
 light_specular = 0.0
 omni_range = 9.0
